@@ -1,6 +1,6 @@
 body {
-  --font-primary: Avant Garde, sans-serif;
-  --font-secondary: Bauer Bodoni, sans-serif;
+  --font-primary: Authentic Sans, sans-serif;
+  --font-secondary: Authentic Sans, sans-serif;
   --font-size: 14px;
   --line-height: 1.5;
   --letter-spacing: 0.05em;
@@ -44,6 +44,12 @@ body {
   --fastest: 150ms;
   --fast: 250ms;
   --slow: 350ms; }
+
+@font-face {
+  font-family: 'Authentic Sans';
+  src: url("../fonts/Authentic-Sans/Authentic-Sans.woff2") format("woff2"), url("../fonts/Authentic-Sans/Authentic-Sans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
 *,
 *:before,
