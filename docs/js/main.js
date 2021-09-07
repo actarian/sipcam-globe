@@ -592,7 +592,7 @@ var Globe = /*#__PURE__*/function () {
     };
     var renderer = this.renderer = new THREE.WebGLRenderer({
       alpha: true,
-      antialias: false
+      antialias: true
     });
     renderer.shadowMap.enabled = true;
     renderer.setSize(window.innerWidth, window.innerHeight);
