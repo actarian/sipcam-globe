@@ -2522,20 +2522,32 @@ body {
       min-width: min(400px, calc(100vw - 30px));
       padding: 30px 25px; }
     .section--global-presence .card--address .card__country {
-      color: #283583; }
+      font-size: 14px;
+      font-weight: 600;
+      color: #283583;
+      text-transform: uppercase; }
     .section--global-presence .card--address .card__city {
+      font-size: 32px;
       color: #00833e; }
     .section--global-presence .card--address .card__name {
+      font-size: 17px;
+      font-weight: 600;
       color: #1d1d1b; }
     .section--global-presence .card--address .card__address {
+      margin-bottom: 10px;
+      font-size: 17px;
       color: #2b2b29; }
     .section--global-presence .card--address .card__phone {
-      display: block; }
+      display: block;
+      font-size: 17px;
+      font-weight: 600; }
       .section--global-presence .card--address .card__phone, .section--global-presence .card--address .card__phone:link, .section--global-presence .card--address .card__phone:active, .section--global-presence .card--address .card__phone:focus, .section--global-presence .card--address .card__phone:visited, .section--global-presence .card--address .card__phone:hover {
         color: #1d1d1b;
         text-decoration: none; }
     .section--global-presence .card--address .card__email {
-      display: block; }
+      display: block;
+      font-size: 17px;
+      font-weight: 600; }
       .section--global-presence .card--address .card__email, .section--global-presence .card--address .card__email:link, .section--global-presence .card--address .card__email:active, .section--global-presence .card--address .card__email:focus, .section--global-presence .card--address .card__email:visited, .section--global-presence .card--address .card__email:hover {
         color: #00833e; }
     .section--global-presence .card--address .card__close {

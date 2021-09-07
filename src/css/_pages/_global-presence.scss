@@ -53,24 +53,34 @@
 		}
 
 		.card__country {
+			font-size: 14px;
+			font-weight: 600;
 			color: #283583;
+			text-transform: uppercase;
 		}
 
 		.card__city {
+			font-size: 32px;
 			color: #00833e;
 		}
 
 		.card__name {
+			font-size: 17px;
+			font-weight: 600;
 			color: #1d1d1b;
 		}
 
 		.card__address {
+			margin-bottom: 10px;
+			font-size: 17px;
 			color: #2b2b29;
 		}
 
 		.card__phone {
 			@extend %btn-reset;
 			display: block;
+			font-size: 17px;
+			font-weight: 600;
 
 			&,
 			&:link,
@@ -86,6 +96,8 @@
 		.card__email {
 			@extend %btn-reset;
 			display: block;
+			font-size: 17px;
+			font-weight: 600;
 
 			&,
 			&:link,
