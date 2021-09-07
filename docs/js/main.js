@@ -331,19 +331,20 @@ function getSplineFromCoords(coords) {
     this.dragging = true;
     var down = this.down;
     var position = this.position;
+    var strength = this.strength;
     var speed = this.speed;
     var target = this.target;
     var distance = this.distance;
     distance.x = x - down.x;
     distance.y = y - down.y;
-    var strength = {
-      x: distance.x / window.innerWidth * 2,
-      y: distance.y / window.innerHeight * 2
-    }; // speed.x += (strength.x - this.strength.x) * 0.1;
+    strength.x = distance.x / window.innerWidth * 2;
+    strength.y = distance.y / window.innerHeight * 2; // speed.x += (strength.x - this.strength.x) * 0.1;
     // speed.y += (strength.y - this.strength.y) * 0.1;
 
-    speed.x = speed.x * 0.9 + (x - position.x) / window.innerWidth * 2;
-    speed.y = speed.y * 0.9 + (y - position.y) / window.innerHeight * 2;
+    var sx = (x - position.x) / window.innerWidth * 2;
+    var sy = (y - position.y) / window.innerHeight * 2;
+    speed.x = speed.x * 0.5 + sx;
+    speed.y = speed.y * 0.5 + sy;
     position.x = x;
     position.y = y;
     this.strength = strength;
@@ -645,7 +646,7 @@ var Globe = /*#__PURE__*/function () {
       globeDragRotation.copy(globeStartDragRotation).add(new THREE.Euler(Math.PI * move.strength.y * 0.5, Math.PI * move.strength.x, 0, 'XYZ'));
       globeSpeedRotation.set(0, 0, 0, 'XYZ');
     }, function (up) {
-      globeSpeedRotation.set(Math.PI * up.speed.y * 0.25, Math.PI * up.speed.x * 0.5, 0, 'XYZ');
+      globeSpeedRotation.set(Math.PI * up.speed.y * 0.5, Math.PI * up.speed.x, 0, 'XYZ');
     });
     this.onPlay();
     this.onResize();

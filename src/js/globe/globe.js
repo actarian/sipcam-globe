@@ -130,7 +130,7 @@ export class Globe {
 			globeDragRotation.copy(globeStartDragRotation).add(new THREE.Euler(Math.PI * move.strength.y * 0.5, Math.PI * move.strength.x, 0, 'XYZ'));
 			globeSpeedRotation.set(0, 0, 0, 'XYZ');
 		}, (up) => {
-			globeSpeedRotation.set(Math.PI * up.speed.y * 0.25, Math.PI * up.speed.x * 0.5, 0, 'XYZ');
+			globeSpeedRotation.set(Math.PI * up.speed.y * 0.5, Math.PI * up.speed.x, 0, 'XYZ');
 		});
 
 		this.onPlay();
