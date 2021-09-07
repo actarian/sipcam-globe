@@ -1,0 +1,55 @@
+﻿{
+  "targets": {
+    "browser": {
+      "compile": [
+        {
+          "input": "src/*.html",
+          "output": "docs/",
+          "minify": true
+        },
+        {
+          "input": "src/css/main-cssvars.scss",
+          "output": "docs/css/main.css",
+          "minify": true
+        },
+        {
+          "input": "src/js/main.js",
+          "output": {
+            "file": "docs/js/main.js",
+            "format": "umd"
+          },
+          "globals": {
+            "gsap": "gsap",
+            "three": "THREE"
+          },
+          "minify": true
+        }
+      ],
+      "bundle": [],
+      "copy": []
+    },
+    "vendors": {
+      "compile": [],
+      "bundle": [
+        {
+          "input": [
+            "node_modules/gsap/dist/EasePack.js",
+            "node_modules/gsap/dist/gsap.js",
+            "node_modules/three/build/three.js"
+          ],
+          "output": "docs/js/vendors.js",
+          "minify": true
+        }
+      ],
+      "copy": []
+    }
+  },
+  "tfs": false,
+  "server": {
+    "root": "./docs",
+    "path": "/sipcam-globe/",
+    "host": "0.0.0.0",
+    "port": 49123,
+    "log": false
+  }
+}

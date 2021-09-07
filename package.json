@@ -1,0 +1,23 @@
+{
+  "author": "Luca Zampetti <lzampetti@gmail.com>",
+  "name": "sipcam-globe",
+  "description": "sipcam-globe",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/actarian/sipcam-globe.git"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {},
+  "dependencies": {
+    "d3-geo": "3.0.1",
+    "gsap": "3.7.1",
+    "three": "0.132.2"
+  },
+  "devDependencies": {
+    "gulpfile-config": "1.0.0-alpha.14"
+  }
+}

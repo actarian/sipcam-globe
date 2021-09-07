@@ -1,0 +1,626 @@
+[
+  {
+    "id": 28,
+    "title": "Sipcam Oxon e Sipcam Italia",
+    "description": "<p>Via Sempione, 195,<br />20016 Pero (MI), Italy<br />Ph. +39 02 35378.1 </p><p><em>Solo per l’Italia / Only for Italy<br /></em><a href=\"mailto:info@sipcam.it\">info@sipcam.it</a> <a href=\"http://www.sipcamitalia.it\" target=\"_blank\" rel=\"noopener\">www.sipcamitalia.it</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Via Sempione, 195, 20016 Pero (MI), Italy", "italy": true,
+    "position": {
+      "lat": 45.5154679,
+      "lng": 9.0749266
+    }
+  },
+  {
+    "id": 29,
+    "title": "Sipcam Portugal",
+    "description": "<p>Rua da Logística, 1, 2050-542 Vila Nova da Rainha</p><p><br />Ph. +351 263 400 050/6<br /><strong><a href=\"mailto:sipcamportugal@sipcam.pt\" target=\"_blank\" rel=\"noopener\">sipcamportugal@sipcam.pt</a></strong> <br /><strong><a href=\"http://www.sipcam.pt/\" target=\"_blank\" rel=\"noopener\">www.sipcam.pt</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rua da Logística, 1, 2050-542 Vila Nova da Rainha",
+    "position": {
+      "lat": 39.0572645,
+      "lng": -8.9099452
+    }
+  },
+  {
+    "id": 30,
+    "title": "Sipcam Benelux",
+    "description": "<p>Rue Théodore De Cuyper, 100,<br />B-1200 Brussels, Woluwe-Saint-Lambert</p><p><br />Ph. +32 (0)2 770 0037</p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rue Théodore De Cuyper, 100, B-1200 Brussels, Woluwe-Saint-Lambert",
+    "position": {
+      "lat": 50.8508578,
+      "lng": 4.4343795
+    }
+  },
+  {
+    "id": 31,
+    "title": "Sipcam Hellas",
+    "description": "<p>Iras 3, Koropi, P.C. 19400 Attika, Greece</p><p><br />Ph. +30 210 5223834<br /><strong><a href=\"mailto:info@sipcam.gr\" target=\"_blank\" rel=\"noopener\">info@sipcam.gr</a> <br /></strong><a href=\"http://sipcam.gr/\" target=\"_blank\" rel=\"noopener\"><strong>www.sipcam.gr</strong></a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Iras 3, Koropi, P.C. 19400 Attika, Greece",
+    "position": {
+      "lat": 36.4167799,
+      "lng": 22.9438783
+    }
+  },
+  {
+    "id": 32,
+    "title": "Sipcam UK",
+    "description": "<p>4C, The Lanterns – Melbourn Street Royston SG8 7BX</p><p><br />Ph. +44 1763 212100</p>",
+    "type": "company",
+    "group": 0,
+    "address": "4C, The Lanterns – Melbourn Street Royston SG8 7BX",
+    "position": {
+      "lat": 52.0483713,
+      "lng": -0.0247757
+    }
+  },
+  {
+    "id": 33,
+    "title": "Sipcam Inagra",
+    "description": "<p>Carretera Mareny Blau, 46410 Sueca (Va), Spain</p><p><br />Ph. +34 96 3483500<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a> <br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Carretera Mareny Blau, 46410 Sueca (Va), Spain",
+    "position": {
+      "lat": 39.2110526,
+      "lng": -0.2786892
+    }
+  },
+  {
+    "id": 34,
+    "title": "Sipcam Iberia",
+    "description": "<p>Calle del Profesor Beltrán Báguena, 5,<br />46009 Valencia (España)</p><p><br />Ph. +34 96 3483500<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a> <br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Calle del Profesor Beltrán Báguena, 5, 46009 Valencia (España)",
+    "position": {
+      "lat": 39.4806574,
+      "lng": -0.391572
+    }
+  },
+  {
+    "id": 35,
+    "title": "Sipcam Agro USA",
+    "description": "<p>2525 Meridian Parkway,<br />Suite 350 Durham, NC 27713</p><p> </p><p>Ph. 877-898-9514<br /><a href=\"https://www.sipcamagrousa.com/\" target=\"_blank\" rel=\"noopener\">www.sipcamagrousa.com</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "2525 Meridian Parkway, Suite 350 Durham, NC 27713",
+    "position": {
+      "lat": 35.9099588,
+      "lng": -78.9017744
+    }
+  },
+  {
+    "id": 36,
+    "title": "Sicpam Advan Mexico",
+    "description": "<p>Calle Jose Guadalupe Montenegro N° 1886 Int. 301-302,<br />Colonia Americana C.P. 44160 Guadalajara, Jalisco – MEXICO<br /><br />Ph. +52 (33)3826-5706-07 <br /><strong><a href=\"mailto:atencionaclientes@advan.com.mx\" target=\"_blank\" rel=\"noopener\">atencionaclientes@advan.com.mx</a> <br /><a href=\"http://www.advan.com.mx/\" target=\"_blank\" rel=\"noopener\">www.advan.com.mx</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Calle Jose Guadalupe Montenegro N° 1886 Int. 301-302",
+    "position": {
+      "lat": 21.8886938,
+      "lng": -103.4728462
+    }
+  },
+  {
+    "id": 37,
+    "title": "Sipcam Nichino Brasil",
+    "description": "<p>R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil</p><p><br />Ph. +55 34 3319 5550<br /><strong><a href=\"mailto:contato@snbrasil.com.br\" target=\"_blank\" rel=\"noopener\">contato@snbrasil.com.br</a></strong> <br /><strong><a href=\"http://sipcam-nichino.com.br/\" target=\"_blank\" rel=\"noopener\">www.sipcam-nichino.com.br</a></strong></p>",
+    "type": "company",
+    "group": 1,
+    "address": "R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil",
+    "position": {
+      "lat": -19.9660894,
+      "lng": -47.9003082
+    }
+  },
+  {
+    "id": 38,
+    "title": "Sipcam Argentina",
+    "description": "<p>Monroe 87, Piso 1 Of. \"F\" B1609DYA Boulogne, San Isidro</p><p> </p><p>Ph. +54 11 4763 2700 / 8923<br /><a href=\"mailto:consultas@sipcam.com.ar\">consultas@sipcam.com.ar</a><br /><a href=\"https://sipcam.com.ar\">sipcam.com.ar</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Monroe 87, Piso 1 Of. \"F\" B1609DYA Boulogne, San Isidro",
+    "position": {
+      "lat": -34.4951772,
+      "lng": -58.5558006
+    }
+  },
+  {
+    "id": 39,
+    "title": "Sipcam Paraguay",
+    "description": "<p>Herib Campos Cervera &amp; Avenida Aviadores del Chaco<br />Plaza Center Santa Teresa - PISO 7 , Número 2351, Asunción.</p><p> </p><p>Ph. +54 11 4763 2700 / 8923<br /><a href=\"mailto:consultas@sipcam.com.ar\">consultas@sipcam.com.ar</a><br /><a href=\"https://sipcam.com.ar\">sipcam.com.ar</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "paraguay",
+    "position": {
+      "lat": -25.282702,
+      "lng": -57.563672
+    }
+  },
+  {
+    "id": 40,
+    "title": "Sipcam Pacific Australia",
+    "description": "<p>Level 1 – 191 Malop St. Geelong, Victoria 3220</p><p><br />Ph. +61 3 5223 3746<br /><strong><a href=\"mailto:information@sipcam.com.au\" target=\"_blank\" rel=\"noopener\">information@sipcam.com.au</a><br /><a href=\"http://www.sipcam.com.au/\" target=\"_blank\" rel=\"noopener\">www.sipcam.com.au</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Level 1 – 191 Malop St. Geelong, Victoria 3220",
+    "position": {
+      "lat": -38.1483792,
+      "lng": 144.3634297
+    }
+  },
+  {
+    "id": 41,
+    "title": "Sipcam China",
+    "description": "<p>Rm 1102, Zhongyi Int’l Commercial Plaza, No 88,<br />Guangxin Rd, Shanghai, China</p><p><br />Ph. +86 21 32551491<br /><strong><a href=\"http://www.sipcam.cn/\" target=\"_blank\" rel=\"noopener\">www.sipcam.cn</a><br /><a href=\"mailto:info@sipcam.cn\" target=\"_blank\" rel=\"noopener\">info@sipcam.cn</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rm 1102, Zhongyi Int’l Commercial Plaza, No 88, Guangxin Rd, Shanghai, China",
+    "position": {
+      "lat": 31.2510836,
+      "lng": 121.4314693
+    }
+  },
+  {
+    "id": 42,
+    "title": "Sipcam Japan CO LT",
+    "description": "<p>Leve1 28, Shinagawa intercity Tower A, 2-15-1 Konan, Minato-ku,<br />Tokyo 108‐ 6028, Japan</p><p><br /><strong><a href=\"mailto:t.tanaka@sipcam.jp\" target=\"_blank\" rel=\"noopener\">t.tanaka@sipcam.jp</a></strong></p>",
+    "type": "company",
+    "group": 1,
+    "address": "Leve1 28, Shinagawa intercity Tower A, 2-15-1 Konan, Minato-ku, Tokyo 108‐ 6028, Japan",
+    "position": {
+      "lat": 35.6265206,
+      "lng": 139.7398273
+    }
+  },
+  {
+    "id": 43,
+    "title": "Sipcam East Asia",
+    "description": "<p>Suite 504 Tonson Building Road, Bangkok 10330</p>",
+    "type": "company",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 13.740235,
+      "lng": 100.545155
+    }
+  },
+  {
+    "id": 44,
+    "title": "Sofbey",
+    "description": "<p>Rue del Graman, 12, 1241 Puplinge Geneva, Switzerland</p><p>Ph. +41 22 349 42 83<br /><a href=\"mailto:info@sofbey.com\">info@sofbey.com</a><br /><a href=\"https://sofbey.com/\" target=\"_blank\" rel=\"noopener\">sofbey.com</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rue del Graman, 12, 1241 Puplinge Geneva, Switzerland",
+    "position": {
+      "lat": 46.2075427,
+      "lng": 6.2195516
+    }
+  },
+  {
+    "id": 45,
+    "title": "Sipcam Oxon",
+    "description": "<p>Str. Prov.le per Torre Beretti km 2.6,<br />27030 Mezzana Bigli (PV), Italy</p><p> </p><p>Ph. +39 0384 88088</p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Str. Prov.le per Torre Beretti km 2.6, 27030 Mezzana Bigli (PV), Italy", "italy": true,
+    "position": {
+      "lat": 45.0599403,
+      "lng": 8.8643101
+    }
+  },
+  {
+    "id": 46,
+    "title": "Sipcam Oxon",
+    "description": "<p>Via Vittorio Veneto, 81, 26857<br />Salerano sul Lambro (LO), Italy</p><p> </p><p>Ph. +39 0371 596.1</p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Via Vittorio Veneto, 81, 26857 Salerano sul Lambro (LO), Italy", "italy": true,
+    "position": {
+      "lat": 45.2927486,
+      "lng": 9.3799194
+    }
+  },
+  {
+    "id": 47,
+    "title": "Sipcam Oxon",
+    "description": "<p>Via San Colombano, 81a,<br />26900 Lodi (LO), Italy</p><p> </p><p>Ph. +39 0371 5971</p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Via San Colombano, 81a, 26900Lodi (LO), Italy", "italy": true,
+    "position": {
+      "lat": 45.289992,
+      "lng": 9.5025397
+    }
+  },
+  {
+    "id": 48,
+    "title": "Suli Chemical Co. Ltd.",
+    "description": "",
+    "type": "plant",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 31.8393628,
+      "lng": 120.1546189
+    }
+  },
+  {
+    "id": 49,
+    "title": "Taizhou Bailly Chemical Co.Ltd",
+    "description": "",
+    "type": "plant",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 32.172175,
+      "lng": 120.052108
+    }
+  },
+  {
+    "id": 50,
+    "title": "Sipcam Inagra",
+    "description": "<p>Carretera Mareny Blau, 46410 Sueca (Va), Spain</p><p><br />Ph. +34 96 1702100<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a><br /><a href=\"http://www.sipcaminagra.es/\" target=\"_blank\" rel=\"noopener\">www.sipcaminagra.es</a></strong></p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Carretera Mareny Blau, 46410 Sueca (Va), Spain",
+    "position": {
+      "lat": 39.2110526,
+      "lng": -0.2786892
+    }
+  },
+  {
+    "id": 51,
+    "title": "Sipcam Nichino Brazil",
+    "description": "<p>R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil</p><p><br />Ph. +55 34 3319 5550<br /><strong><a href=\"mailto:contato@snbrasil.com.br\" target=\"_blank\" rel=\"noopener\">contato@snbrasil.com.br</a></strong> <br /><strong><a href=\"http://sipcam-nichino.com.br/\" target=\"_blank\" rel=\"noopener\">www.sipcam-nichino.com.br</a></strong></p>",
+    "type": "plant",
+    "group": 2,
+    "address": "R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil",
+    "position": {
+      "lat": -19.9660894,
+      "lng": -47.9003082
+    }
+  },
+  {
+    "id": 100,
+    "title": "Sipcaminagra Maroc Sarl, AU",
+    "description": "<p>Kenitra</p><p>Ph. +34 96 3483500<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a><br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 34.261,
+      "lng": -6.5802
+    }
+  },
+  {
+    "id": 102,
+    "title": "Et Sipcam Egypt",
+    "description": "<p>Cairo (Heliopolis)</p><p>Ph. +34 96 3483500<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a><br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 30.090984,
+      "lng": 31.322708
+    }
+  },
+  {
+    "id": 52,
+    "title": "Sipcam Oxon e Sipcam Italia",
+    "description": "<p>Via Sempione, 195, 20016 Pero (MI), Italy</p><p>Ph. +39 02 35378.1</p><p><em>Solo per l’Italia / Only for Italy</em><br /><a href=\"mailto:info@sipcam.it\">info@sipcam.it</a><br /><a href=\"http://www.sipcamitalia.it\" target=\"_blank\" rel=\"noopener\">www.sipcamitalia.it</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Via Sempione, 195, 20016 Pero (MI), Italy", "italy": true,
+    "position": {
+      "lat": 45.5154679,
+      "lng": 9.0749266
+    }
+  },
+  {
+    "id": 53,
+    "title": "Sipcam Portugal",
+    "description": "<p>Rua da Logística, 1, 2050-542 Vila Nova da Rainha</p><p><br />Ph. +351 263 400 050/6<br /><strong><a href=\"mailto:sipcamportugal@sipcam.pt\" target=\"_blank\" rel=\"noopener\">sipcamportugal@sipcam.pt</a></strong> <br /><strong><a href=\"http://www.sipcam.pt/\" target=\"_blank\" rel=\"noopener\">www.sipcam.pt</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rua da Logística, 1, 2050-542 Vila Nova da Rainha",
+    "position": {
+      "lat": 39.0572645,
+      "lng": -8.9099452
+    }
+  },
+  {
+    "id": 54,
+    "title": "Sipcam Benelux",
+    "description": "<p>Rue Théodore De Cuyper, 100,<br />B-1200 Brussels, Woluwe-Saint-Lambert</p><p><br />Ph. +32 (0)2 770 0037</p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rue Théodore De Cuyper, 100, B-1200 Brussels, Woluwe-Saint-Lambert",
+    "position": {
+      "lat": 50.8508578,
+      "lng": 4.4343795
+    }
+  },
+  {
+    "id": 55,
+    "title": "Sipcam Hellas",
+    "description": "<p>Iras 3, Koropi, P.C. 19400 Attika, Greece</p><p><br />Ph. +30 210 5223834<br /><strong><a href=\"mailto:info@sipcam.gr\" target=\"_blank\" rel=\"noopener\">info@sipcam.gr</a> <br /></strong><a href=\"http://sipcam.gr/\" target=\"_blank\" rel=\"noopener\"><strong>www.sipcam.gr</strong></a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Iras 3, Koropi, P.C. 19400 Attika, Greece",
+    "position": {
+      "lat": 36.4167799,
+      "lng": 22.9438783
+    }
+  },
+  {
+    "id": 56,
+    "title": "Sipcam UK",
+    "description": "<p>4C, The Lanterns – Melbourn Street Royston SG8 7BX</p><p><br />Ph. +44 1763 212100</p>",
+    "type": "company",
+    "group": 0,
+    "address": "4C, The Lanterns – Melbourn Street Royston SG8 7BX",
+    "position": {
+      "lat": 52.0483713,
+      "lng": -0.0247757
+    }
+  },
+  {
+    "id": 57,
+    "title": "Sipcam Inagra",
+    "description": "<p>Carretera Mareny Blau, 46410 Sueca (Va), Spain</p><p><br />Ph. +34 96 3483500<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a> <br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Carretera Mareny Blau, 46410 Sueca (Va), Spain",
+    "position": {
+      "lat": 39.2110526,
+      "lng": -0.2786892
+    }
+  },
+  {
+    "id": 58,
+    "title": "Sipcam Iberia",
+    "description": "<p>Calle del Profesor Beltrán Báguena, 5,<br />46009 Valencia (España)</p><p><br />Ph. +34 96 3483500<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a> <br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Calle del Profesor Beltrán Báguena, 5, 46009 Valencia (España)",
+    "position": {
+      "lat": 39.4806574,
+      "lng": -0.391572
+    }
+  },
+  {
+    "id": 59,
+    "title": "Sipcam Agro USA",
+    "description": "<p>2525 Meridian Parkway,<br />Suite 350 Durham, NC 27713</p><p> </p><p>Ph. 877-898-9514<br /><a href=\"https://www.sipcamagrousa.com/\" target=\"_blank\" rel=\"noopener\">www.sipcamagrousa.com</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "2525 Meridian Parkway, Suite 350 Durham, NC 27713",
+    "position": {
+      "lat": 35.9099588,
+      "lng": -78.9017744
+    }
+  },
+  {
+    "id": 60,
+    "title": "Sicpam Advan Mexico",
+    "description": "<p>Calle Jose Guadalupe Montenegro N° 1886 Int. 301-302,<br />Colonia Americana C.P. 44160 Guadalajara, Jalisco – MEXICO<br /><br />Ph. +52 (33)3826-5706-07 <br /><strong><a href=\"mailto:atencionaclientes@advan.com.mx\" target=\"_blank\" rel=\"noopener\">atencionaclientes@advan.com.mx</a> <br /><a href=\"http://www.advan.com.mx/\" target=\"_blank\" rel=\"noopener\">www.advan.com.mx</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Calle Jose Guadalupe Montenegro N° 1886 Int. 301-302",
+    "position": {
+      "lat": 21.8886938,
+      "lng": -103.4728462
+    }
+  },
+  {
+    "id": 61,
+    "title": "Sipcam Nichino Brasil",
+    "description": "<p>R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil</p><p><br />Ph. +55 34 3319 5550<br /><strong><a href=\"mailto:contato@snbrasil.com.br\" target=\"_blank\" rel=\"noopener\">contato@snbrasil.com.br</a></strong> <br /><strong><a href=\"http://sipcam-nichino.com.br/\" target=\"_blank\" rel=\"noopener\">www.sipcam-nichino.com.br</a></strong></p>",
+    "type": "company",
+    "group": 1,
+    "address": "R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil",
+    "position": {
+      "lat": -19.9660894,
+      "lng": -47.9003082
+    }
+  },
+  {
+    "id": 62,
+    "title": "Sipcam Argentina",
+    "description": "<p>Monroe 87, Piso 1 Of. \"F\" B1609DYA Boulogne, San Isidro</p><p> </p><p>Ph. +54 11 4763 2700 / 8923<br /><a href=\"mailto:consultas@sipcam.com.ar\">consultas@sipcam.com.ar</a><br /><a href=\"https://sipcam.com.ar\">sipcam.com.ar</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Monroe 87, Piso 1 Of. \"F\" B1609DYA Boulogne, San Isidro",
+    "position": {
+      "lat": -34.4951772,
+      "lng": -58.5558006
+    }
+  },
+  {
+    "id": 63,
+    "title": "Sipcam Paraguay",
+    "description": "<p>Herib Campos Cervera &amp; Avenida Aviadores del Chaco<br />Plaza Center Santa Teresa - PISO 7 , Número 2351, Asunción.</p><p> </p><p>Ph. +54 11 4763 2700 / 8923<br /><a href=\"mailto:consultas@sipcam.com.ar\">consultas@sipcam.com.ar</a><br /><a href=\"https://sipcam.com.ar\">sipcam.com.ar</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "paraguay",
+    "position": {
+      "lat": -25.282702,
+      "lng": -57.563672
+    }
+  },
+  {
+    "id": 64,
+    "title": "Sipcam Pacific Australia",
+    "description": "<p>Level 1 – 191 Malop St. Geelong, Victoria 3220</p><p><br />Ph. +61 3 5223 3746<br /><strong><a href=\"mailto:information@sipcam.com.au\" target=\"_blank\" rel=\"noopener\">information@sipcam.com.au</a><br /><a href=\"http://www.sipcam.com.au/\" target=\"_blank\" rel=\"noopener\">www.sipcam.com.au</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Level 1 – 191 Malop St. Geelong, Victoria 3220",
+    "position": {
+      "lat": -38.1483792,
+      "lng": 144.3634297
+    }
+  },
+  {
+    "id": 65,
+    "title": "Sipcam China",
+    "description": "<p>Rm 1102, Zhongyi Int’l Commercial Plaza, No 88,<br />Guangxin Rd, Shanghai, China</p><p><br />Ph. +86 21 32551491<br /><strong><a href=\"http://www.sipcam.cn/\" target=\"_blank\" rel=\"noopener\">www.sipcam.cn</a><br /><a href=\"mailto:info@sipcam.cn\" target=\"_blank\" rel=\"noopener\">info@sipcam.cn</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rm 1102, Zhongyi Int’l Commercial Plaza, No 88, Guangxin Rd, Shanghai, China",
+    "position": {
+      "lat": 31.2510836,
+      "lng": 121.4314693
+    }
+  },
+  {
+    "id": 66,
+    "title": "Sipcam Japan CO LT",
+    "description": "<p>Leve1 28, Shinagawa intercity Tower A, 2-15-1 Konan, Minato-ku,<br />Tokyo 108‐ 6028, Japan</p><p><br /><strong><a href=\"mailto:t.tanaka@sipcam.jp\" target=\"_blank\" rel=\"noopener\">t.tanaka@sipcam.jp</a></strong></p>",
+    "type": "company",
+    "group": 1,
+    "address": "Leve1 28, Shinagawa intercity Tower A, 2-15-1 Konan, Minato-ku, Tokyo 108‐ 6028, Japan",
+    "position": {
+      "lat": 35.6265206,
+      "lng": 139.7398273
+    }
+  },
+  {
+    "id": 67,
+    "title": "Sipcam East Asia",
+    "description": "<p>Suite 504 Tonson Building Road, Bangkok 10330</p>",
+    "type": "company",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 13.740235,
+      "lng": 100.545155
+    }
+  },
+  {
+    "id": 68,
+    "title": "Sofbey",
+    "description": "<p>Rue del Graman, 12, 1241 Puplinge Geneva, Switzerland</p><p>Ph. +41 22 349 42 83<br /><a href=\"mailto:info@sofbey.com\">info@sofbey.com</a><br /><a href=\"https://sofbey.com/\" target=\"_blank\" rel=\"noopener\">sofbey.com</a></p>",
+    "type": "company",
+    "group": 0,
+    "address": "Rue del Graman, 12, 1241 Puplinge Geneva, Switzerland",
+    "position": {
+      "lat": 46.2075427,
+      "lng": 6.2195516
+    }
+  },
+  {
+    "id": 101,
+    "title": "Sipcaminagra Maroc Sarl, AU",
+    "description": "<p>Kenitra</p><p>Ph. +34 96 3483500<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a><br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 34.261,
+      "lng": -6.5802
+    }
+  },
+  {
+    "id": 103,
+    "title": "Et Sipcam Egypt",
+    "description": "<p>Cairo (Heliopolis)</p><p>Ph. +34 96 3483500<br />Fax. +34 96 3482721<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a><br /><a href=\"http://www.sipcamiberia.es/\" target=\"_blank\" rel=\"noopener\">www.sipcamiberia.es</a></strong></p>",
+    "type": "company",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 30.090984,
+      "lng": 31.322708
+    }
+  },
+  {
+    "id": 93,
+    "title": "Sipcam Oxon",
+    "description": "<p>Str. Prov.le per Torre Beretti km 2.6,<br />27030 Mezzana Bigli (PV), Italy</p><p> </p><p>Ph. +39 0384 88088</p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Str. Prov.le per Torre Beretti km 2.6, 27030 Mezzana Bigli (PV), Italy", "italy": true,
+    "position": {
+      "lat": 45.0599403,
+      "lng": 8.8643101
+    }
+  },
+  {
+    "id": 94,
+    "title": "Sipcam Oxon",
+    "description": "<p>Via Vittorio Veneto, 81, 26857<br />Salerano sul Lambro (LO), Italy</p><p> </p><p>Ph. +39 0371 596.1</p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Via Vittorio Veneto, 81, 26857 Salerano sul Lambro (LO), Italy", "italy": true,
+    "position": {
+      "lat": 45.2927486,
+      "lng": 9.3799194
+    }
+  },
+  {
+    "id": 95,
+    "title": "Sipcam Oxon",
+    "description": "<p>Via San Colombano, 81a,<br />26900 Lodi (LO), Italy</p><p> </p><p>Ph. +39 0371 5971</p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Via San Colombano, 81a, 26900Lodi (LO), Italy", "italy": true,
+    "position": {
+      "lat": 45.289992,
+      "lng": 9.5025397
+    }
+  },
+  {
+    "id": 96,
+    "title": "Suli Chemical Co. Ltd.",
+    "description": "",
+    "type": "plant",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 31.8393628,
+      "lng": 120.1546189
+    }
+  },
+  {
+    "id": 97,
+    "title": "Taizhou Bailly Chemical Co.Ltd",
+    "description": "",
+    "type": "plant",
+    "group": 0,
+    "address": "",
+    "position": {
+      "lat": 32.172175,
+      "lng": 120.052108
+    }
+  },
+  {
+    "id": 98,
+    "title": "Sipcam Inagra",
+    "description": "<p>Carretera Mareny Blau, 46410 Sueca (Va), Spain</p><p><br />Ph. +34 96 1702100<br /><strong><a href=\"mailto:info@sipcam.es\" target=\"_blank\" rel=\"noopener\">info@sipcam.es</a><br /><a href=\"http://www.sipcaminagra.es/\" target=\"_blank\" rel=\"noopener\">www.sipcaminagra.es</a></strong></p>",
+    "type": "plant",
+    "group": 0,
+    "address": "Carretera Mareny Blau, 46410 Sueca (Va), Spain",
+    "position": {
+      "lat": 39.2110526,
+      "lng": -0.2786892
+    }
+  },
+  {
+    "id": 99,
+    "title": "Sipcam Nichino Brazil",
+    "description": "<p>R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil</p><p><br />Ph. +55 34 3319 5550<br /><strong><a href=\"mailto:contato@snbrasil.com.br\" target=\"_blank\" rel=\"noopener\">contato@snbrasil.com.br</a></strong> <br /><strong><a href=\"http://sipcam-nichino.com.br/\" target=\"_blank\" rel=\"noopener\">www.sipcam-nichino.com.br</a></strong></p>",
+    "type": "plant",
+    "group": 0,
+    "address": "R. Igarapava, 599 – Distrito Industrial III, Uberaba Brasil",
+    "position": {
+      "lat": -19.9660894,
+      "lng": -47.9003082
+    }
+  }
+]

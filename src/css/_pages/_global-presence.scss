@@ -1,0 +1,39 @@
+.section--global-presence {
+	background: #f6f6f6;
+
+	.group--globe {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 30%;
+			background: white;
+		}
+
+		&>canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		@include media-up(sm) {
+			height: #{'min(1000px, 100vh)'};
+			width: 100vw;
+			margin-left: #{'min(0.01px, calc(50% - 50vw))'};
+			margin-right: #{'min(0.01px, calc(50% - 50vw))'};
+		}
+
+		@include media-down(xs) {
+			height: 100vw;
+			width: calc(100% + 30px);
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+}

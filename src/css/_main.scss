@@ -1,0 +1,23 @@
+html,
+body {
+	width: 100%;
+	margin: 0;
+}
+
+.container {
+	max-width: #{'min(1650px, calc(100vw - 150px))'};
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	width: calc(100% + 150px);
+	margin-left: -75px;
+	margin-right: -75px;
+
+	&>div {
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+}
