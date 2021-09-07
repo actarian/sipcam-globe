@@ -4,7 +4,6 @@ import { DragService } from './drag.service';
 import { Points } from './points';
 import { Tooltip } from './tooltip';
 
-// var shadow = addShadow(scene);
 THREE.Euler.prototype.add = function(euler) {
 	this.set(this.x + euler.x, this.y + euler.y, this.z + euler.z, this.order);
 	return this;
@@ -58,14 +57,14 @@ export class Globe {
 		const element = this.element;
 		const mode = this.mode = element.getAttribute('data-mode') === Modes.Interactive ? Modes.Interactive : Modes.Curves;
 
-		this.mouse = { x: 0, y: 0 };
-		this.parallax = { x: 0, y: 0 };
+		// this.mouse = { x: 0, y: 0 };
+		// this.parallax = { x: 0, y: 0 };
 
 		const renderer = this.renderer = new THREE.WebGLRenderer({
 			alpha: true,
 			antialias: true
 		});
-		renderer.shadowMap.enabled = true;
+		// renderer.shadowMap.enabled = true;
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		element.appendChild(renderer.domElement);
 
@@ -212,6 +211,7 @@ export class Globe {
 		this.pointerUp = true;
 	}
 
+	/*
 	onMouseMove(e) {
 		const w2 = window.innerWidth / 2;
 		const h2 = window.innerHeight / 2;
@@ -221,7 +221,9 @@ export class Globe {
 		};
 		// console.log('onMouseMove', mouse);
 	}
+	*/
 
+	/*
 	doParallax() {
 		// parallax
 		this.parallax.x += (this.mouse.x - this.parallax.x) / 8;
@@ -230,6 +232,7 @@ export class Globe {
 		this.directional1.position.set(this.parallax.x * 0.3, 2 + this.parallax.y * 0.3, 0.5);
 		this.directional2.position.set(this.parallax.x * 0.3, -2 + this.parallax.y * 0.3, 0);
 	}
+	*/
 
 	onRender(delta) {
 		if (this.tooltip == null) {

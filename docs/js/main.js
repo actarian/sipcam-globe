@@ -41,51 +41,7 @@ var GLOBE_CENTER = new THREE.Vector3(0, 0, 0);
 var CURVE_SEGMENTS = 128;
 var CURVE_MIN_ALTITUDE = GLOBE_RADIUS / 10;
 var CURVE_MAX_ALTITUDE = GLOBE_RADIUS;
-var DEGREE_TO_RADIAN = Math.PI / 180;
-var COORDINATES = window.COORDINATES || [{
-  latitude: 43.9096538,
-  longitude: 12.8399805,
-  color: '283583'
-}, // pesaro
-{
-  latitude: 41.8519772,
-  longitude: 12.2347364,
-  color: '00833e'
-}, // rome
-{
-  latitude: 51.5287718,
-  longitude: -0.2416791,
-  color: '283583'
-}, // london
-{
-  latitude: 55.6713812,
-  longitude: 12.4537393,
-  color: '00833e'
-}, // copenaghen
-{
-  latitude: 40.6976637,
-  longitude: -74.1197623,
-  color: '283583'
-}, // new york
-{
-  latitude: 19.3911668,
-  longitude: -99.4238221,
-  color: '00833e'
-}, // mexico city
-{
-  latitude: 39.9390731,
-  longitude: 116.11726,
-  color: '283583'
-}, // beijing
-{
-  latitude: 31.2243084,
-  longitude: 120.9162376,
-  color: '00833e'
-} // shangai
-].map(function (x) {
-  x.color = new THREE.Color("#" + x.color);
-  return x;
-});var pi = Math.PI;
+var DEGREE_TO_RADIAN = Math.PI / 180;var pi = Math.PI;
 var halfPi = pi / 2;
 
 var degrees = 180 / pi;
@@ -582,20 +538,14 @@ var Globe = /*#__PURE__*/function () {
 
   _proto.initScene = function initScene() {
     var element = this.element;
-    var mode = this.mode = element.getAttribute('data-mode') === Modes.Interactive ? Modes.Interactive : Modes.Curves;
-    this.mouse = {
-      x: 0,
-      y: 0
-    };
-    this.parallax = {
-      x: 0,
-      y: 0
-    };
+    var mode = this.mode = element.getAttribute('data-mode') === Modes.Interactive ? Modes.Interactive : Modes.Curves; // this.mouse = { x: 0, y: 0 };
+    // this.parallax = { x: 0, y: 0 };
+
     var renderer = this.renderer = new THREE.WebGLRenderer({
       alpha: true,
       antialias: true
-    });
-    renderer.shadowMap.enabled = true;
+    }); // renderer.shadowMap.enabled = true;
+
     renderer.setSize(window.innerWidth, window.innerHeight);
     element.appendChild(renderer.domElement);
     var scene = this.scene = new THREE.Scene(); // scene.fog = new THREE.FogExp2(0x000000, 0.1); // new THREE.Fog(0x000000, 0, 10);
@@ -727,25 +677,30 @@ var Globe = /*#__PURE__*/function () {
     this.pointer.x = x / w * 2 - 1;
     this.pointer.y = -(y / h) * 2 + 1;
     this.pointerUp = true;
-  };
+  }
+  /*
+  onMouseMove(e) {
+  	const w2 = window.innerWidth / 2;
+  	const h2 = window.innerHeight / 2;
+  	this.mouse = {
+  		x: (e.clientX - w2) / w2,
+  		y: (e.clientY - h2) / h2,
+  	};
+  	// console.log('onMouseMove', mouse);
+  }
+  */
 
-  _proto.onMouseMove = function onMouseMove(e) {
-    var w2 = window.innerWidth / 2;
-    var h2 = window.innerHeight / 2;
-    this.mouse = {
-      x: (e.clientX - w2) / w2,
-      y: (e.clientY - h2) / h2
-    }; // console.log('onMouseMove', mouse);
-  };
-
-  _proto.doParallax = function doParallax() {
-    // parallax
-    this.parallax.x += (this.mouse.x - this.parallax.x) / 8;
-    this.parallax.y += (this.mouse.y - this.parallax.y) / 8; //
-
-    this.directional1.position.set(this.parallax.x * 0.3, 2 + this.parallax.y * 0.3, 0.5);
-    this.directional2.position.set(this.parallax.x * 0.3, -2 + this.parallax.y * 0.3, 0);
-  };
+  /*
+  doParallax() {
+  	// parallax
+  	this.parallax.x += (this.mouse.x - this.parallax.x) / 8;
+  	this.parallax.y += (this.mouse.y - this.parallax.y) / 8;
+  	//
+  	this.directional1.position.set(this.parallax.x * 0.3, 2 + this.parallax.y * 0.3, 0.5);
+  	this.directional2.position.set(this.parallax.x * 0.3, -2 + this.parallax.y * 0.3, 0);
+  }
+  */
+  ;
 
   _proto.onRender = function onRender(delta) {
     if (this.tooltip == null) {
