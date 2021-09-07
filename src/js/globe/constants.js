@@ -1,7 +1,7 @@
 
 export const GLOBE_RADIUS = 0.5;
 export const PARTICLE_RADIUS = GLOBE_RADIUS + 0.001;
-export const PARTICLE_SIZE = 0.035;
+export const PARTICLE_SIZE = 0.03;
 export const PARTICLE_THRESHOLD = 0.015;
 export const GLOBE_CENTER = new THREE.Vector3(0, 0, 0);
 

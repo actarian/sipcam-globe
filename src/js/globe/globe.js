@@ -2,6 +2,7 @@ import { GLOBE_RADIUS, PARTICLE_SIZE, PARTICLE_THRESHOLD } from './constants';
 import { Curves } from './curves';
 import { DragService } from './drag.service';
 import { Points } from './points';
+import { Tooltip } from './tooltip';
 
 // var shadow = addShadow(scene);
 THREE.Euler.prototype.add = function(euler) {
@@ -116,9 +117,11 @@ export class Globe {
 
 		this.onResize = this.onResize.bind(this);
 		this.onPointerMove = this.onPointerMove.bind(this);
+		this.onPointerUp = this.onPointerUp.bind(this);
 
 		window.addEventListener('resize', this.onResize, false);
 		document.addEventListener('pointermove', this.onPointerMove);
+		document.addEventListener('pointerup', this.onPointerUp);
 		// document.addEventListener('mousemove', onMouseMove, false);
 
 		const dragService = this.dragService = new DragService(element, (down) => {
@@ -197,6 +200,17 @@ export class Globe {
 		this.pointer.y = -(y / h) * 2 + 1;
 	}
 
+	onPointerUp(event) {
+		const rect = this.element.getBoundingClientRect();
+		const x = event.clientX - rect.x;
+		const y = event.clientY - rect.y;
+		const w = rect.width;
+		const h = rect.height;
+		this.pointer.x = (x / w) * 2 - 1;
+		this.pointer.y = -(y / h) * 2 + 1;
+		this.pointerUp = true;
+	}
+
 	onMouseMove(e) {
 		const w2 = window.innerWidth / 2;
 		const h2 = window.innerHeight / 2;
@@ -217,26 +231,38 @@ export class Globe {
 	}
 
 	onRender(delta) {
-		if (!this.dragService.dragging) {
-			this.globeRotation.y += this.globeSpeedRotation.y;
-			this.globeSpeedRotation.y += (0.0005 - this.globeSpeedRotation.y) / 50;
+		if (!this.tooltip) {
+			if (!this.dragService.dragging) {
+				this.globeRotation.y += this.globeSpeedRotation.y;
+				this.globeSpeedRotation.y += (0.0005 - this.globeSpeedRotation.y) / 50;
+			}
+			this.globeGroup.rotation.copy(this.globeRotation).add(this.globeDragRotation);
+			if (this.mode === Modes.Curves) {
+				this.curves.onRender();
+			}
+			/*
+			particles.geometry.vertices.forEach((vertex, i) => {
+				const local = globeGroup.localToWorld(vertex.clone());
+				const distance = local.distanceTo(particleRef);
+				const s = Math.max(0, Math.min(1, (1 - distance))) * 5;
+				particles.geometry.colors[i] = new THREE.Color(s, s, s);
+				particles.geometry.colorsNeedUpdate = true;
+			});
+			*/
+			this.onCheckIntersections();
 		}
-		this.globeGroup.rotation.copy(this.globeRotation).add(this.globeDragRotation);
-		if (this.mode === Modes.Curves) {
-			this.curves.onRender();
-		}
-		/*
-		particles.geometry.vertices.forEach((vertex, i) => {
-			const local = globeGroup.localToWorld(vertex.clone());
-			const distance = local.distanceTo(particleRef);
-			const s = Math.max(0, Math.min(1, (1 - distance))) * 5;
-			particles.geometry.colors[i] = new THREE.Color(s, s, s);
-			particles.geometry.colorsNeedUpdate = true;
-		});
-		*/
-		this.onCheckIntersections();
 		this.renderer.render(this.scene, this.camera);
 		// doParallax();
+	}
+
+	onPlay() {
+		const clock = new THREE.Clock();
+		const loop = (time) => {
+			const delta = clock.getDelta();
+			this.onRender(delta);
+			window.requestAnimationFrame(loop);
+		}
+		loop();
 	}
 
 	onCheckIntersections() {
@@ -288,16 +314,25 @@ export class Globe {
 				}
 			});
 		}
+		if (this.pointerUp) {
+			this.pointerUp = false;
+			this.onPointSelected(pointIndex);
+		}
 	}
 
-	onPlay() {
-		const clock = new THREE.Clock();
-		const loop = (time) => {
-			const delta = clock.getDelta();
-			this.onRender(delta);
-			window.requestAnimationFrame(loop);
+	onPointSelected(index) {
+		if (index !== -1) {
+			const item = this.data[index];
+			const tooltip = this.tooltip = new Tooltip(item, () => {
+				this.element.removeChild(tooltip.element);
+				this.tooltip = null;
+			});
+			this.element.appendChild(tooltip.element);
+			console.log('onPointSelected', index, this.tooltip);
+			if (typeof window['onPointSelected'] === 'function') {
+				window.onPointSelected(item, index);
+			}
 		}
-		loop();
 	}
 
 }

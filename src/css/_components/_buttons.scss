@@ -1,0 +1,78 @@
+%btn-reset {
+	display: inline-block;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	appearance: none;
+	font: inherit;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	// transition: ease-in-out 350ms;
+	// transition-property: background-color, color, border, opacity;
+	&,
+	&:active,
+	&:focus,
+	&:hover,
+	&:visited {
+		color: inherit;
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+%btn {
+	@extend %btn-reset;
+
+	// transition: ease-in-out 350ms;
+	// transition-property: background-color, color, border, opacity;
+	&[disabled] {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+
+@mixin btn($fill: transparent,
+	$color: $foreground,
+	$fillOver: $fill,
+	$colorOver: $color,
+	$fillPressed: $fillOver,
+	$colorPressed: $colorOver,
+	$fillDisabled: $fill,
+	$colorDisabled: $color) {
+
+	@extend %btn;
+
+	&,
+	&:active,
+	&:focus,
+	&:visited {
+		background-color: $fill;
+		color: $color;
+	}
+
+	&:hover {
+		background-color: $fillOver;
+		color: $colorOver;
+	}
+
+	&:active:hover {
+		background-color: $fillPressed;
+		color: $colorPressed;
+		transition: none;
+	}
+
+	&.disabled {
+
+		&,
+		&:active,
+		&:focus,
+		&:hover,
+		&:visited {
+			background-color: $fillDisabled;
+			color: $colorDisabled;
+			pointer-events: none;
+		}
+	}
+}

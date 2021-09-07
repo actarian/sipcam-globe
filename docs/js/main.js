@@ -35,7 +35,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }var GLOBE_RADIUS = 0.5;
 var PARTICLE_RADIUS = GLOBE_RADIUS + 0.001;
-var PARTICLE_SIZE = 0.035;
+var PARTICLE_SIZE = 0.03;
 var PARTICLE_THRESHOLD = 0.015;
 var GLOBE_CENTER = new THREE.Vector3(0, 0, 0);
 var CURVE_SEGMENTS = 128;
@@ -425,7 +425,8 @@ function getSplineFromCoords(coords) {
 
   return DragService;
 }();var Points = /*#__PURE__*/function () {
-  function Points(coordinates) {
+  function Points(items) {
+    this.items = items;
     var canvas = Points.getParticleCanvas();
     var texture = new THREE.CanvasTexture(canvas);
     var geometry = new THREE.BufferGeometry();
@@ -446,15 +447,15 @@ function getSplineFromCoords(coords) {
       shader.fragmentShader = shader.fragmentShader.replace("#include <clipping_planes_fragment>", "\n    if ( floor(vVisible + 0.1) == 0.0 ) discard;\n    #include <clipping_planes_fragment>\n"); // console.log(shader.fragmentShader);
     };
 
-    var vertices = new Float32Array(coordinates.length * 3);
-    var normals = new Float32Array(coordinates.length * 3);
-    var colors = new Float32Array(coordinates.length * 3);
-    var sizes = new Float32Array(coordinates.length);
+    var vertices = new Float32Array(items.length * 3);
+    var normals = new Float32Array(items.length * 3);
+    var colors = new Float32Array(items.length * 3);
+    var sizes = new Float32Array(items.length);
     var normal = new THREE.Vector3();
-    var points = coordinates.map(function (x) {
+    var points = items.map(function (x) {
       return Points.getLatLonToVector(x.latitude, x.longitude, PARTICLE_RADIUS);
     }).forEach(function (point, i) {
-      var coordinate = coordinates[i];
+      var item = items[i];
       vertices[i * 3] = point.x;
       vertices[i * 3 + 1] = point.y;
       vertices[i * 3 + 2] = point.z;
@@ -462,9 +463,9 @@ function getSplineFromCoords(coords) {
       normals[i * 3] = normal.x;
       normals[i * 3 + 1] = normal.y;
       normals[i * 3 + 2] = normal.z;
-      colors[i * 3] = coordinate.color.r;
-      colors[i * 3 + 1] = coordinate.color.g;
-      colors[i * 3 + 2] = coordinate.color.b;
+      colors[i * 3] = item.color.r;
+      colors[i * 3 + 1] = item.color.g;
+      colors[i * 3 + 2] = item.color.b;
       sizes[i] = PARTICLE_SIZE;
     });
     geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
@@ -499,7 +500,17 @@ function getSplineFromCoords(coords) {
   };
 
   return Points;
-}();THREE.Euler.prototype.add = function (euler) {
+}();var Tooltip = function Tooltip(item, removeCallback) {
+  var div = document.createElement('div');
+  div.innerHTML = "\n\t\t<div class=\"card--address\">\n\t\t\t<div class=\"card__content\">\n\t\t\t\t<div class=\"card__country\">Spain</div>\n\t\t\t\t<div class=\"card__city\">Sueca</div>\n\t\t\t\t<div class=\"card__name\">" + item.title + "</div>\n\t\t\t\t<div class=\"card__address\">" + item.address + "</div>\n\t\t\t\t<a class=\"card__phone\" href=\"tel:0034961702100\">Ph. +34 96 1702100</a>\n\t\t\t\t<a class=\"card__email\" href=\"mailto:www.sipcaminagra.es\">www.sipcaminagra.es</a>\n\t\t\t</div>\n\t\t\t<button class=\"card__close\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z\"/></svg></button>\n\t\t</div>";
+  console.log(div.firstElementChild, item);
+  this.element = div.firstElementChild;
+  this.element.querySelector('.card__close').addEventListener('click', function () {
+    if (typeof removeCallback === 'function') {
+      removeCallback();
+    }
+  });
+};THREE.Euler.prototype.add = function (euler) {
   this.set(this.x + euler.x, this.y + euler.y, this.z + euler.z, this.order);
   return this;
 };
@@ -623,8 +634,10 @@ var Globe = /*#__PURE__*/function () {
     var pointer = this.pointer = new THREE.Vector2();
     this.onResize = this.onResize.bind(this);
     this.onPointerMove = this.onPointerMove.bind(this);
+    this.onPointerUp = this.onPointerUp.bind(this);
     window.addEventListener('resize', this.onResize, false);
-    document.addEventListener('pointermove', this.onPointerMove); // document.addEventListener('mousemove', onMouseMove, false);
+    document.addEventListener('pointermove', this.onPointerMove);
+    document.addEventListener('pointerup', this.onPointerUp); // document.addEventListener('mousemove', onMouseMove, false);
 
     var dragService = this.dragService = new DragService(element, function (down) {
       globeStartDragRotation.copy(globeDragRotation);
@@ -703,6 +716,17 @@ var Globe = /*#__PURE__*/function () {
     this.pointer.y = -(y / h) * 2 + 1;
   };
 
+  _proto.onPointerUp = function onPointerUp(event) {
+    var rect = this.element.getBoundingClientRect();
+    var x = event.clientX - rect.x;
+    var y = event.clientY - rect.y;
+    var w = rect.width;
+    var h = rect.height;
+    this.pointer.x = x / w * 2 - 1;
+    this.pointer.y = -(y / h) * 2 + 1;
+    this.pointerUp = true;
+  };
+
   _proto.onMouseMove = function onMouseMove(e) {
     var w2 = window.innerWidth / 2;
     var h2 = window.innerHeight / 2;
@@ -722,29 +746,48 @@ var Globe = /*#__PURE__*/function () {
   };
 
   _proto.onRender = function onRender(delta) {
-    if (!this.dragService.dragging) {
-      this.globeRotation.y += this.globeSpeedRotation.y;
-      this.globeSpeedRotation.y += (0.0005 - this.globeSpeedRotation.y) / 50;
+    if (!this.tooltip) {
+      if (!this.dragService.dragging) {
+        this.globeRotation.y += this.globeSpeedRotation.y;
+        this.globeSpeedRotation.y += (0.0005 - this.globeSpeedRotation.y) / 50;
+      }
+
+      this.globeGroup.rotation.copy(this.globeRotation).add(this.globeDragRotation);
+
+      if (this.mode === Modes.Curves) {
+        this.curves.onRender();
+      }
+      /*
+      particles.geometry.vertices.forEach((vertex, i) => {
+      	const local = globeGroup.localToWorld(vertex.clone());
+      	const distance = local.distanceTo(particleRef);
+      	const s = Math.max(0, Math.min(1, (1 - distance))) * 5;
+      	particles.geometry.colors[i] = new THREE.Color(s, s, s);
+      	particles.geometry.colorsNeedUpdate = true;
+      });
+      */
+
+
+      this.onCheckIntersections();
     }
 
-    this.globeGroup.rotation.copy(this.globeRotation).add(this.globeDragRotation);
-
-    if (this.mode === Modes.Curves) {
-      this.curves.onRender();
-    }
-    /*
-    particles.geometry.vertices.forEach((vertex, i) => {
-    	const local = globeGroup.localToWorld(vertex.clone());
-    	const distance = local.distanceTo(particleRef);
-    	const s = Math.max(0, Math.min(1, (1 - distance))) * 5;
-    	particles.geometry.colors[i] = new THREE.Color(s, s, s);
-    	particles.geometry.colorsNeedUpdate = true;
-    });
-    */
-
-
-    this.onCheckIntersections();
     this.renderer.render(this.scene, this.camera); // doParallax();
+  };
+
+  _proto.onPlay = function onPlay() {
+    var _this3 = this;
+
+    var clock = new THREE.Clock();
+
+    var loop = function loop(time) {
+      var delta = clock.getDelta();
+
+      _this3.onRender(delta);
+
+      window.requestAnimationFrame(loop);
+    };
+
+    loop();
   };
 
   _proto.onCheckIntersections = function onCheckIntersections() {
@@ -762,20 +805,23 @@ var Globe = /*#__PURE__*/function () {
     }
   };
 
-  _proto.onPlay = function onPlay() {
-    var _this3 = this;
+  _proto.onPointSelected = function onPointSelected(index) {
+    var _this4 = this;
 
-    var clock = new THREE.Clock();
+    if (index !== -1) {
+      var item = this.data[index];
+      var tooltip = this.tooltip = new Tooltip(item, function () {
+        _this4.element.removeChild(tooltip.element);
 
-    var loop = function loop(time) {
-      var delta = clock.getDelta();
+        _this4.tooltip = null;
+      });
+      this.element.appendChild(tooltip.element);
+      console.log('onPointSelected', index, this.tooltip);
 
-      _this3.onRender(delta);
-
-      window.requestAnimationFrame(loop);
-    };
-
-    loop();
+      if (typeof window['onPointSelected'] === 'function') {
+        window.onPointSelected(item, index);
+      }
+    }
   };
 
   _createClass(Globe, [{
@@ -815,6 +861,11 @@ var Globe = /*#__PURE__*/function () {
             attributes.customsize.needsUpdate = true;
           }
         });
+      }
+
+      if (this.pointerUp) {
+        this.pointerUp = false;
+        this.onPointSelected(pointIndex);
       }
     }
   }]);

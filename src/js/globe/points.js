@@ -2,7 +2,8 @@ import { PARTICLE_RADIUS, PARTICLE_SIZE } from './constants';
 
 export class Points {
 
-	constructor(coordinates) {
+	constructor(items) {
+		this.items = items;
 		const canvas = Points.getParticleCanvas();
 		const texture = new THREE.CanvasTexture(canvas);
 		const geometry = new THREE.BufferGeometry();
@@ -41,15 +42,15 @@ export class Points {
 			);
 			// console.log(shader.fragmentShader);
 		}
-		const vertices = new Float32Array(coordinates.length * 3);
-		const normals = new Float32Array(coordinates.length * 3);
-		const colors = new Float32Array(coordinates.length * 3);
-		const sizes = new Float32Array(coordinates.length);
+		const vertices = new Float32Array(items.length * 3);
+		const normals = new Float32Array(items.length * 3);
+		const colors = new Float32Array(items.length * 3);
+		const sizes = new Float32Array(items.length);
 		const normal = new THREE.Vector3();
-		const points = coordinates.map((x) => {
+		const points = items.map((x) => {
 			return Points.getLatLonToVector(x.latitude, x.longitude, PARTICLE_RADIUS);
 		}).forEach((point, i) => {
-			const coordinate = coordinates[i];
+			const item = items[i];
 			vertices[i * 3] = point.x;
 			vertices[i * 3 + 1] = point.y;
 			vertices[i * 3 + 2] = point.z;
@@ -57,9 +58,9 @@ export class Points {
 			normals[i * 3] = normal.x;
 			normals[i * 3 + 1] = normal.y;
 			normals[i * 3 + 2] = normal.z;
-			colors[i * 3] = coordinate.color.r;
-			colors[i * 3 + 1] = coordinate.color.g;
-			colors[i * 3 + 2] = coordinate.color.b;
+			colors[i * 3] = item.color.r;
+			colors[i * 3 + 1] = item.color.g;
+			colors[i * 3 + 2] = item.color.b;
 			sizes[i] = PARTICLE_SIZE;
 		});
 		geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
