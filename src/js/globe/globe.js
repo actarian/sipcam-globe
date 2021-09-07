@@ -142,10 +142,11 @@ export class Globe {
 	getGlobe(texture) {
 		const geometry = new THREE.SphereGeometry(GLOBE_RADIUS, 48, 48);
 		const material = new THREE.MeshStandardMaterial({
-			color: '#ffffff',
-			roughness: 1,
+			color: 0xffffff,
+			roughness: 0.8,
 			metalness: 0.0,
 			map: texture,
+			roughnessMap: texture,
 		});
 		const mesh = new THREE.Mesh(geometry, material);
 		return mesh;

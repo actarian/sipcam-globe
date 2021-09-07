@@ -656,10 +656,11 @@ var Globe = /*#__PURE__*/function () {
   _proto.getGlobe = function getGlobe(texture) {
     var geometry = new THREE.SphereGeometry(GLOBE_RADIUS, 48, 48);
     var material = new THREE.MeshStandardMaterial({
-      color: '#ffffff',
-      roughness: 1,
+      color: 0xffffff,
+      roughness: 0.8,
       metalness: 0.0,
-      map: texture
+      map: texture,
+      roughnessMap: texture
     });
     var mesh = new THREE.Mesh(geometry, material);
     return mesh;
