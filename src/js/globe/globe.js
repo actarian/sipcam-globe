@@ -231,12 +231,12 @@ export class Globe {
 	}
 
 	onRender(delta) {
-		if (!this.tooltip) {
+		if (this.tooltip == null) {
 			if (!this.dragService.dragging) {
 				this.globeRotation.x += this.globeSpeedRotation.x;
 				this.globeRotation.y += this.globeSpeedRotation.y;
 				this.globeSpeedRotation.x += (0.0000 - this.globeSpeedRotation.x) / 50;
-				this.globeSpeedRotation.y += (0.0000 - this.globeSpeedRotation.y) / 50;
+				this.globeSpeedRotation.y += (0.0003 - this.globeSpeedRotation.y) / 50;
 			}
 			this.globeGroup.rotation.copy(this.globeRotation).add(this.globeDragRotation);
 			if (this.mode === Modes.Curves) {
