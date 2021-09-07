@@ -5,7 +5,7 @@ export class Tooltip {
 		div.innerHTML = `
 		<div class="card--address">
 			<div class="card__content">
-				<div class="card__country">Spain</div>
+				<div class="card__country">${item.country}</div>
 				<div class="card__city">Sueca</div>
 				<div class="card__name">${item.title}</div>
 				<div class="card__address">${item.address}</div>
