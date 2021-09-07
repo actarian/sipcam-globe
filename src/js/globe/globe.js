@@ -127,10 +127,10 @@ export class Globe {
 		const dragService = this.dragService = new DragService(element, (down) => {
 			globeStartDragRotation.copy(globeDragRotation);
 		}, (move) => {
-			globeDragRotation.copy(globeStartDragRotation).add(new THREE.Euler(0, Math.PI * move.strength.x, 0, 'XYZ'));
+			globeDragRotation.copy(globeStartDragRotation).add(new THREE.Euler(Math.PI * move.strength.y * 0.5, Math.PI * move.strength.x, 0, 'XYZ'));
 			globeSpeedRotation.set(0, 0, 0, 'XYZ');
 		}, (up) => {
-			globeSpeedRotation.set(0, Math.PI * up.speed.x * 0.5, 0, 'XYZ');
+			globeSpeedRotation.set(Math.PI * up.speed.y * 0.25, Math.PI * up.speed.x * 0.5, 0, 'XYZ');
 		});
 
 		this.onPlay();
@@ -233,8 +233,10 @@ export class Globe {
 	onRender(delta) {
 		if (!this.tooltip) {
 			if (!this.dragService.dragging) {
+				this.globeRotation.x += this.globeSpeedRotation.x;
 				this.globeRotation.y += this.globeSpeedRotation.y;
-				this.globeSpeedRotation.y += (0.0005 - this.globeSpeedRotation.y) / 50;
+				this.globeSpeedRotation.x += (0.0000 - this.globeSpeedRotation.x) / 50;
+				this.globeSpeedRotation.y += (0.0000 - this.globeSpeedRotation.y) / 50;
 			}
 			this.globeGroup.rotation.copy(this.globeRotation).add(this.globeDragRotation);
 			if (this.mode === Modes.Curves) {
