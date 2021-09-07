@@ -33,7 +33,7 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
-}var GLOBE_RADIUS = 0.5;
+}var GLOBE_RADIUS = 0.6;
 var PARTICLE_RADIUS = GLOBE_RADIUS + 0.001;
 var PARTICLE_SIZE = 0.03;
 var PARTICLE_THRESHOLD = 0.015;

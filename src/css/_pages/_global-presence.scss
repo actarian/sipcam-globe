@@ -4,6 +4,14 @@
 	.group--globe {
 		position: relative;
 
+		&>.globe__shadow {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 100%;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;

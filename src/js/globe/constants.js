@@ -1,5 +1,5 @@
 
-export const GLOBE_RADIUS = 0.5;
+export const GLOBE_RADIUS = 0.6;
 export const PARTICLE_RADIUS = GLOBE_RADIUS + 0.001;
 export const PARTICLE_SIZE = 0.03;
 export const PARTICLE_THRESHOLD = 0.015;

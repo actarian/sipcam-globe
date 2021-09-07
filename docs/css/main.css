@@ -2458,6 +2458,12 @@ body {
 
 .section--globe .group--globe {
   position: relative; }
+  .section--globe .group--globe > .globe__shadow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%; }
   .section--globe .group--globe > canvas {
     position: absolute;
     top: 0;
@@ -2489,6 +2495,12 @@ body {
   background: #f6f6f6; }
   .section--global-presence .group--globe {
     position: relative; }
+    .section--global-presence .group--globe > .globe__shadow {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 100%; }
     .section--global-presence .group--globe:before {
       content: '';
       position: absolute;
